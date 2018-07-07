@@ -1,0 +1,42 @@
+:host {
+  display: grid;
+
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  --rotation: 135deg;
+  /* --rotation: 235deg; */
+  --odd-color-step: 5;
+  --even-color-step: 5;
+
+  --center: 12;
+
+  height: 100vh;
+  width: 100vw;
+
+  contain: strict;
+}
+
+.square {
+  --size: calc(40px + var(--index) * 10px);
+
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  transform: rotateZ(calc(var(--rotation) * var(--state) * (var(--center) - var(--index))));
+  transition: transform 10s ease-in-out;
+  grid-area: 1 / 1;
+
+  will-change: transform;
+
+  contain: strict;
+}
+
+.square:nth-child(odd) {
+  --luminance: calc(var(--index) * var(--odd-color-step));
+  background: rgb(var(--luminance), var(--luminance), var(--luminance));
+}
+
+.square:nth-child(even) {
+  background: white;
+}

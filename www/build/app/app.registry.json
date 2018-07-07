@@ -1,0 +1,13 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "global": "app.global.js",
+  "core": "app.w4ovoddi.js",
+  "corePolyfilled": "app.pqdfoma9.js",
+  "components": {
+    "app-home": {
+      "$": "y5kqhfb4"
+    }
+  }
+}
