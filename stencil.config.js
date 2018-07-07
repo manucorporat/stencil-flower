@@ -3,6 +3,7 @@ exports.config = {
   outputTargets: [
     {
       type: 'www',
+      dir: 'docs',
       serviceWorker: false
     }
   ]

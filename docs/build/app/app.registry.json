@@ -2,12 +2,12 @@
   "namespace": "App",
   "fsNamespace": "app",
   "loader": "../app.js",
-  "corePolyfilled": "es5-build-disabled.js",
   "global": "app.global.js",
-  "core": "app.core.js",
+  "core": "app.w4ovoddi.js",
+  "corePolyfilled": "app.pqdfoma9.js",
   "components": {
     "app-home": {
-      "$": "app-home"
+      "$": "y5kqhfb4"
     }
   }
 }
