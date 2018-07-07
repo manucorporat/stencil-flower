@@ -5,7 +5,8 @@
   justify-content: center;
   justify-items: center;
   --rotation: 135deg;
-  /* --rotation: 235deg; */
+  --rotation: 225deg;
+  --size-step: 10px;
   --odd-color-step: 5;
   --even-color-step: 5;
 
@@ -18,13 +19,13 @@
 }
 
 .square {
-  --size: calc(40px + var(--index) * 10px);
+  --size: calc(40px + var(--index) * var(--size-step));
 
   display: block;
   width: var(--size);
   height: var(--size);
   transform: rotateZ(calc(var(--rotation) * var(--state) * (var(--center) - var(--index))));
-  transition: transform 10s ease-in-out;
+  transition: transform 5s ease-in-out;
   grid-area: 1 / 1;
   background: white;
 

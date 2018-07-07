@@ -14,7 +14,7 @@ export class AppHome {
 
   componentDidLoad() {
     setTimeout(() => this.state = 1, 500);
-    setInterval(() => this.state++, 13000);
+    setInterval(() => this.state++, 7000);
   }
 
   hostData() {
