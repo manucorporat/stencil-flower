@@ -26,17 +26,15 @@
   transform: rotateZ(calc(var(--rotation) * var(--state) * (var(--center) - var(--index))));
   transition: transform 10s ease-in-out;
   grid-area: 1 / 1;
+  background: white;
 
   will-change: transform;
 
   contain: strict;
 }
 
-.square:nth-child(2n + 1) {
+.square.odd {
   --luminance: calc(var(--index) * var(--odd-color-step));
   background: rgb(var(--luminance), var(--luminance), var(--luminance));
 }
 
-.square:nth-child(2n) {
-  background: white;
-}

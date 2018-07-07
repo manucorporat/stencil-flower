@@ -25,7 +25,12 @@ export class AppHome {
 
   render() {
     return Array.from({ length: this.nu }, (_, i) => (
-      <div class="square" style={{ '--index': `${i + 1}`}} />
+      <div
+        class={{
+          'square': true,
+          'odd': (i % 2) === 0
+        }}
+        style={{ '--index': `${i + 1}` }} />
     )).reverse();
   }
 }
