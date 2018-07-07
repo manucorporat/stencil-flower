@@ -1,10 +1,10 @@
 exports.config = {
-  globalStyle: 'src/global/app.css',
   outputTargets: [
     {
       type: 'www',
       dir: 'docs',
-      serviceWorker: false
+      serviceWorker: false,
+      inlineLoaderScript: false,
     }
   ]
 };
