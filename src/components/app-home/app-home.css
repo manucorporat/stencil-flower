@@ -32,11 +32,11 @@
   contain: strict;
 }
 
-.square:nth-child(odd) {
+.square:nth-child(2n + 1) {
   --luminance: calc(var(--index) * var(--odd-color-step));
   background: rgb(var(--luminance), var(--luminance), var(--luminance));
 }
 
-.square:nth-child(even) {
+.square:nth-child(2n) {
   background: white;
 }
