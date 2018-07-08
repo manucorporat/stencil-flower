@@ -25,11 +25,16 @@
   width: var(--size);
   height: var(--size);
   transform: rotateZ(calc(var(--rotation) * var(--state) * (var(--center) - var(--index))));
-  transition: transform 5s ease-in-out;
+  transition-property: transform, border-color;
+  transition-duration: 5s;
+  transition-timing-function: ease-in-out;
   grid-area: 1 / 1;
   background: white;
-
-  will-change: transform;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--border-color);
+  box-sizing: border-box;
+  will-change: transform, border-color;
 
   contain: strict;
 }

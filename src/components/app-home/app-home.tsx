@@ -19,7 +19,10 @@ export class AppHome {
 
   hostData() {
     return {
-      style: {'--state': `${this.state * 0.1}` }
+      style: {
+        '--border-color': `${Math.random() < 0.5 ? 'transparent' : 'black'}`,
+        '--state': `${this.state * 0.1}`,
+      },
     }
   }
 
