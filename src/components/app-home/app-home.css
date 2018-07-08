@@ -44,3 +44,22 @@
   background: rgb(var(--luminance), var(--luminance), var(--luminance));
 }
 
+:host(.pride) .square:nth-child(12n + 1) {
+  background: #E70000;
+}
+:host(.pride) .square:nth-child(12n + 3) {
+  background: #FF8C00;
+}
+:host(.pride) .square:nth-child(12n + 5) {
+  background: #FFEF00;
+}
+:host(.pride) .square:nth-child(12n + 7) {
+  background: #00811F;
+}
+:host(.pride) .square:nth-child(12n + 9) {
+  background: #0044FF;
+}
+:host(.pride) .square:nth-child(12n + 11) {
+  background: #760089;
+}
+

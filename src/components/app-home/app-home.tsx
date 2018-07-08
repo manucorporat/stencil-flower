@@ -23,6 +23,9 @@ export class AppHome {
         '--border-color': `${Math.random() < 0.5 ? 'transparent' : 'black'}`,
         '--state': `${this.state * 0.1}`,
       },
+      class: {
+        'pride': window.location.hash.includes('pride')
+      }
     }
   }
 
