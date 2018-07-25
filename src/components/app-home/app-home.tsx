@@ -20,7 +20,7 @@ export class AppHome {
   hostData() {
     return {
       style: {
-        '--border-color': `${Math.random() < 0.5 ? 'transparent' : 'black'}`,
+        // '--border-color': `${Math.random() < 0.5 ? 'transparent' : 'black'}`,
         '--state': `${this.state * 0.1}`,
       },
       class: {
