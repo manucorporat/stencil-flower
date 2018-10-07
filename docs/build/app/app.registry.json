@@ -2,12 +2,14 @@
   "namespace": "App",
   "fsNamespace": "app",
   "loader": "../app.js",
-  "global": "app.global.js",
-  "core": "app.qtcnxrpo.js",
-  "corePolyfilled": "app.egrgls2f.js",
+  "corePolyfilled": "es5-build-disabled.js",
+  "core": "app.core.js",
   "components": {
     "app-home": {
-      "$": "c5ywbalg"
+      "bundleIds": {
+        "$": "app-home"
+      },
+      "encapsulation": "shadow"
     }
   }
 }
