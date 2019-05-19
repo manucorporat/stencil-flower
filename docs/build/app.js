@@ -1,19 +1,14 @@
-/*!
- * Built with http://stenciljs.com
- * 2018-09-07T06:25:22
- */
+
 (function(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components) {
 
-  function init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCorePolyfilled, hydratedCssClass, components, HTMLElementPrototype, App, x, y, scriptElm) {
+  function init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCorePolyfilled, hydratedCssClass, cmpTags, HTMLElementPrototype, App, x, y, scriptElm) {
     // create global namespace if it doesn't already exist
     App = win[namespace] = win[namespace] || {};
-    App.components = components;
-    y = components.map(function (c) { return c[0]; });
-    if (y.length) {
+    if (cmpTags) {
         // auto hide components until they been fully hydrated
         // reusing the "x" and "i" variables from the args for funzies
         x = doc.createElement('style');
-        x.innerHTML = y.join() + '{visibility:hidden}.' + hydratedCssClass + '{visibility:inherit}';
+        x.innerHTML = cmpTags + '{visibility:hidden}.' + hydratedCssClass + '{visibility:inherit}';
         x.setAttribute('data-styles', '');
         y = doc.head.querySelector('meta[charset]');
         doc.head.insertBefore(x, y ? y.nextSibling : doc.head.firstChild);
@@ -136,4 +131,4 @@ function createComponentOnReadyPrototype(win, namespace, HTMLElementPrototype) {
 
   init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components);
 
-  })(window, document, "App","app",0,"app.core.js","es5-build-disabled.js","hydrated",[["app-home","app-home",1,[["nu",1,0,1,8],["state",16]],1]],HTMLElement.prototype);
+  })(window, document, "App","app",0,"app.core.js","es5-build-disabled.js","hydrated","app-home",HTMLElement.prototype);
