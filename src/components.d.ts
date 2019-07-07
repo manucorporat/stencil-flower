@@ -5,29 +5,16 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-
   interface AppHome {
     'nu': number;
-  }
-  interface AppHomeAttributes extends StencilHTMLAttributes {
-    'nu'?: number;
   }
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-  }
-
-  interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-  }
 
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
@@ -35,22 +22,28 @@ declare global {
     prototype: HTMLAppHomeElement;
     new (): HTMLAppHomeElement;
   };
-
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-  }
-
-  interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+declare namespace LocalJSX {
+  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {
+    'nu'?: number;
+  }
+
+  interface IntrinsicElements {
+    'app-home': AppHome;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+
