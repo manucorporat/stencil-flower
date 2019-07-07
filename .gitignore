@@ -1,4 +1,5 @@
 dist/
+docs/build
 !www/favicon.ico
 
 *~
